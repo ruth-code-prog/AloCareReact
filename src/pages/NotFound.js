@@ -1,7 +1,5 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
-
 import Header from "parts/Header";
 import PageErrorMessage from "parts/PageErrorMessage";
 

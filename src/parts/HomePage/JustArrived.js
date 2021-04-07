@@ -6,6 +6,7 @@ import Carousel from "components/Carousel";
 
 import useAsync from "helpers/hooks/useAsync";
 import fetch from "helpers/fetch";
+import "helpers/format/currency";
 
 function Loading() {
   return Array(6)
@@ -25,7 +26,7 @@ function Loading() {
 }
 
 export default function JustArrived() {
-  const { data, status, error, run, isLoading } = useAsync();
+  const { data, error, run, isLoading } = useAsync();
 
   const refContainer = useRef(null);
 
@@ -92,7 +93,7 @@ export default function JustArrived() {
                     />
                   </div>
                   <h5 className="text-lg font-semibold mt-4">{item.title}</h5>
-                  <span className="">IDR {item.price}</span>
+                  <span className="">{item.price.currency()}</span>
                   <Link
                     to={`/categories/${item.idc}/products/${item.id}`}
                     className="stretched-link"

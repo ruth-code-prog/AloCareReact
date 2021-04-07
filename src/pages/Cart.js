@@ -9,9 +9,11 @@ import ShippingDetails from "parts/Cart/ShippingDetails";
 import Sitemap from "parts/Sitemap";
 import Footer from "parts/Footer";
 
-export default function HomePage() {
+import Document from "parts/Document";
+
+export default function Cart() {
   return (
-    <>
+    <Document>
       <Header theme="black" />
 
       <Breadcrumb
@@ -32,6 +34,6 @@ export default function HomePage() {
 
       <Sitemap />
       <Footer />
-    </>
+    </Document>
   );
 }

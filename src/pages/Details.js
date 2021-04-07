@@ -10,6 +10,8 @@ import Suggestion from "parts/Details/Suggestion";
 
 import Sitemap from "parts/Sitemap";
 import Footer from "parts/Footer";
+import Document from "parts/Document";
+import PageErrorMessage from "parts/PageErrorMessage";
 
 import useAsync from "helpers/hooks/useAsync";
 import fetch from "helpers/fetch";
@@ -107,14 +109,14 @@ function LoadingSuggestion() {
 export default function HomePage() {
   const { idp } = useParams();
 
-  const { data, run, isLoading } = useAsync();
+  const { data, error, run, isLoading, isError } = useAsync();
 
   React.useEffect(() => {
     run(fetch({ url: `/api/products/${idp}` }));
-  }, [run]);
+  }, [run, idp]);
 
   return (
-    <>
+    <Document>
       <Header theme="black" />
 
       <Breadcrumb
@@ -125,15 +127,28 @@ export default function HomePage() {
         ]}
       />
 
-      {isLoading ? <LoadingProductDetails /> : <ProductDetails data={data} />}
-      {isLoading ? (
-        <LoadingSuggestion />
+      {isError ? (
+        <PageErrorMessage
+          title="Product Not Found"
+          body={error.errors.message}
+        />
       ) : (
-        <Suggestion data={data?.relatedProducts || {}} />
+        <>
+          {isLoading ? (
+            <LoadingProductDetails />
+          ) : (
+            <ProductDetails data={data} />
+          )}
+          {isLoading ? (
+            <LoadingSuggestion />
+          ) : (
+            <Suggestion data={data?.relatedProducts || {}} />
+          )}
+        </>
       )}
 
       <Sitemap />
       <Footer />
-    </>
+    </Document>
   );
 }

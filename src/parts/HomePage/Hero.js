@@ -11,7 +11,7 @@ export default function Hero() {
         <h2 className="px-8 text-base md:px-0 md:text-lg my-6 tracking-wide">
           Kami menyediakan Kelas Online
           <br className="hidden lg:block" />
-          dapatkan Skill dan Sertifikat
+          +dapatkan Skill dan Sertifikat Resminya
         </h2>
         <div>
           <a

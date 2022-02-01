@@ -58,53 +58,53 @@ export default function Sitemap() {
             <SitemapLinks
               setActive={setActive}
               isActive={active === 1 ? null : 1}
-              title="Overview"
+              title="Alo Care"
             >
               <li>
                 <Link to="/" className="hover:underline py-1 block">
-                  Shipping
+                  Education
                 </Link>
               </li>
               <li>
                 <Link to="/" className="hover:underline py-1 block">
-                  Refund
+                 Finance
                 </Link>
               </li>
               <li>
                 <Link to="/" className="hover:underline py-1 block">
-                  Promotion
+                  E-Commerce
                 </Link>
               </li>
             </SitemapLinks>
             <SitemapLinks
               setActive={setActive}
               isActive={active === 2 ? null : 2}
-              title="Company"
+              title="Iten Shop"
             >
               <li>
                 <Link to="/" className="hover:underline py-1 block">
-                  About
+                  E-Commerce
                 </Link>
               </li>
               <li>
                 <Link to="/" className="hover:underline py-1 block">
-                  Career
+                 
                 </Link>
               </li>
               <li>
                 <Link to="/" className="hover:underline py-1 block">
-                  Contact Us
+                  
                 </Link>
               </li>
             </SitemapLinks>
             <SitemapLinks
               setActive={setActive}
               isActive={active === 3 ? null : 3}
-              title="Explore"
+              title="Sehat mobile app"
             >
               <li>
                 <Link to="/" className="hover:underline py-1 block">
-                  Terms & Conds
+                 Referensi Obat
                 </Link>
               </li>
               <li>
@@ -112,12 +112,12 @@ export default function Sitemap() {
                   to="/privacy-policy"
                   className="hover:underline py-1 block"
                 >
-                  Privacy Policy
+                  Rekam Medis Online
                 </Link>
               </li>
               <li>
                 <Link to="/" className="hover:underline py-1 block">
-                  For Developer
+                 
                 </Link>
               </li>
             </SitemapLinks>

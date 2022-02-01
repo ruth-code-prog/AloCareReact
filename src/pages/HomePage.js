@@ -15,9 +15,7 @@ export default function HomePage() {
     <Document>
       <Header theme="white" position="absolute" />
       <Hero />
-      <BrowseRoom />
       <JustArrived />
-      <Clients />
       <Sitemap />
       <Footer />
     </Document>

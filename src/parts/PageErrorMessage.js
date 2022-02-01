@@ -3,8 +3,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function PageErrorMessage({
-  title = "404 NOT FOUND",
-  body = "Looks like this page not found",
+  title = "Alo Care",
+  body = "download via Play Store",
 }) {
   return (
     <section className="mt-28">
@@ -15,9 +15,9 @@ export default function PageErrorMessage({
             <p className="text-lg mb-12">{body}</p>
             <Link
               to="/"
-              className="text-gray-900 bg-red-200 focus:outline-none w-full py-3 rounded-full text-lg focus:text-black transition-all duration-200 px-8 cursor-pointer"
+              className="text-gray-900 bg-blue-200 focus:outline-none w-full py-3 rounded-full text-lg focus:text-black transition-all duration-200 px-8 cursor-pointer"
             >
-              Back to Shop
+              Back to Home
             </Link>
           </div>
         </div>

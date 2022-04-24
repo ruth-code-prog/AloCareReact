@@ -5,20 +5,20 @@ export default function Hero() {
     <section className="flex items-center hero">
       <div className="w-full absolute z-20 inset-0 md:relative md:w-1/2 text-center flex flex-col justify-center hero-caption">
         <h1 className="text-3xl md:text-5xl leading-tight font-semibold">
-          Alo Care <br className="" />
+          Ethan Shop <br className="" />
           Mobile App @ Play Store
         </h1>
         <h2 className="px-8 text-base md:px-0 md:text-lg my-6 tracking-wide">
-          Kami menyediakan Kelas Online
+          Perusahan Teknologi melayani kesehatan, Pendidikan, E-Commers + Fintech
           <br className="hidden lg:block" />
-          +dapatkan Skill dan Sertifikat Resminya
+           & temukan kemudahan hidup di era digital
         </h2>
         <div>
           <a
-            href="#browse-the-room"
+            href="https://play.google.com/store/apps/details?id=com.itenshop"
             className="bg-blue-400 text-black hover:bg-black hover:text-pink-400 rounded-full px-8 py-3 mt-4 inline-block flex-none transition duration-200"
           >
-            Explore Now
+            Download Gratis
           </a>
         </div>
       </div>

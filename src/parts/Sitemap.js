@@ -58,53 +58,53 @@ export default function Sitemap() {
             <SitemapLinks
               setActive={setActive}
               isActive={active === 1 ? null : 1}
-              title="Alo Care"
+              title="(Modern Health Services from Ethan Shop)"
             >
               <li>
                 <Link to="/" className="hover:underline py-1 block">
-                  Education
+                 Home Services Rawat Luka
                 </Link>
               </li>
               <li>
                 <Link to="/" className="hover:underline py-1 block">
-                 Finance
+                Home Services Pasang Infus
                 </Link>
               </li>
               <li>
                 <Link to="/" className="hover:underline py-1 block">
-                  E-Commerce
+                Home Services Konsultasi Dokter, dll
                 </Link>
               </li>
             </SitemapLinks>
             <SitemapLinks
               setActive={setActive}
               isActive={active === 2 ? null : 2}
-              title="Iten Shop"
+              title="Edu-Tech"
             >
               <li>
                 <Link to="/" className="hover:underline py-1 block">
-                  E-Commerce
+                  Desain 3D
                 </Link>
               </li>
               <li>
                 <Link to="/" className="hover:underline py-1 block">
-                 
+                 Marketing FB & IG Ads
                 </Link>
               </li>
               <li>
                 <Link to="/" className="hover:underline py-1 block">
-                  
+                  Product Management, Coding, dll
                 </Link>
               </li>
             </SitemapLinks>
             <SitemapLinks
               setActive={setActive}
               isActive={active === 3 ? null : 3}
-              title="Sehat mobile app"
+              title="E-Commerce"
             >
               <li>
                 <Link to="/" className="hover:underline py-1 block">
-                 Referensi Obat
+                 E-Book
                 </Link>
               </li>
               <li>
@@ -112,12 +112,12 @@ export default function Sitemap() {
                   to="/privacy-policy"
                   className="hover:underline py-1 block"
                 >
-                  Rekam Medis Online
+                  Inbumin (Obat Albumin)
                 </Link>
               </li>
               <li>
                 <Link to="/" className="hover:underline py-1 block">
-                 
+                 Malunra (Ekstrak Ikan Gabus)
                 </Link>
               </li>
             </SitemapLinks>

@@ -62,6 +62,11 @@ export default function Sitemap() {
             >
               <li>
                 <Link to="/" className="hover:underline py-1 block">
+                Khitan Modern
+                </Link>
+              </li>
+              <li>
+                <Link to="/" className="hover:underline py-1 block">
                  Home Services Rawat Luka
                 </Link>
               </li>

@@ -9,9 +9,9 @@ export default function Hero() {
           Mobile App @ Play Store
         </h1>
         <h2 className="px-8 text-base md:px-0 md:text-lg my-6 tracking-wide">
-          Platform Digital melayani kesehatan, Pendidikan, E-Commers
+          Platform Digital melayani Kesehatan, Pendidikan & E-Commerce
           <br className="hidden lg:block" />
-           "Easy Way to Make Your Life better"
+           
         </h2>
         <div>
           <a

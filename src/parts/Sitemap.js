@@ -160,24 +160,29 @@ export default function Sitemap() {
             </SitemapLinks>
             <div className="px-4 w-full md:w-3/12 mb-4 md:mb-0">
               <h5 className="text-lg font-semibold mb-2 relative">
-                Special Letter
+                Pesan
               </h5>
               <form action="#" onSubmit={handleOnSubmit}>
                 <label className="relative w-full">
-                  <input
-                    id="Whatsapp" type="Whatsapp" name="Whatsapp" required
-                    className="bg-gray-100 rounded-xl py-3 px-5 mb-2 w-full focus:outline-none"
-                    placeholder="No Whatsapp + Nama Anda"
+                <input
+                    id="Nama" type="Nama" name="Nama" required
+                    className="square border border-dark bg-blue-100 rounded-xl py-3 px-5 mb-2 w-full focus:outline-none"
+                    placeholder="Tulis Nama Anda"
                   />
                   <input
+                    id="Whatsapp" type="Whatsapp" name="Whatsapp" required
+                    className="square border border-dark bg-blue-100 rounded-xl py-3 px-5 mb-2 w-full focus:outline-none"
+                    placeholder="No Whatsapp"
+                  />
+                  <textarea
                     id="pesan" type="pesan" name="pesan" required
-                    className="bg-gray-100 rounded-xl py-3 px-5 w-full focus:outline-none"
+                    className="square border border-dark bg-blue-100 rounded-xl py-3 px-5 w-full focus:outline-none"
                     placeholder="Tulis Pesan Anda di sini..."
                   />
                   <button
                     type="submit"
                     disabled={serverState.submitting}
-                    className="bg-pink-400 absolute rounded-xl right-0 p-3 px-8"
+                    className="bg-pink-400 absolute rounded-xl right-0 p-3 px-8 mt-12"
                   >
                     <svg
                       width="24"

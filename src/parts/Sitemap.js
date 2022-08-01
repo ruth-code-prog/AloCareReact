@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 
 import { Link } from "react-router-dom";
 
@@ -44,6 +45,37 @@ function SitemapLinks({ isActive, setActive, children, title }) {
 
 export default function Sitemap() {
   const [active, setActive] = React.useState(null);
+
+  const [serverState, setServerState] = useState({
+    submitting: false,
+    status: null,
+  });
+  const handleServerResponse = (ok, msg, form) => {
+    setServerState({
+      submitting: false,
+      status: { ok, msg },
+    });
+    if (ok) {
+      form.reset();
+    }
+  };
+  const handleOnSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    setServerState({ submitting: true });
+    axios({
+      method: "post",
+      url: "https://formspree.io/f/mvoyprbp",
+      data: new FormData(form),
+    })
+      .then((r) => {
+        handleServerResponse(true, "Terkirim!", form);
+      })
+      .catch((r) => {
+        handleServerResponse(false, r.response.data.error, form);
+      });
+  };
+
   return (
     <section className="sitemap">
       <div className="border-b border-gray-200 py-12 mt-16 px-4">
@@ -62,22 +94,22 @@ export default function Sitemap() {
             >
               <li>
                 <Link to="/" className="hover:underline py-1 block">
-                Khitan Modern
+                  Khitan Modern
                 </Link>
               </li>
               <li>
                 <Link to="/" className="hover:underline py-1 block">
-                 Home Services Rawat Luka
+                  Home Services Rawat Luka
                 </Link>
               </li>
               <li>
                 <Link to="/" className="hover:underline py-1 block">
-                Home Services Pasang Infus
+                  Home Services Pasang Infus
                 </Link>
               </li>
               <li>
                 <Link to="/" className="hover:underline py-1 block">
-                Home Services Konsultasi Dokter, dll
+                  Home Services Konsultasi Dokter, dll
                 </Link>
               </li>
             </SitemapLinks>
@@ -93,7 +125,7 @@ export default function Sitemap() {
               </li>
               <li>
                 <Link to="/" className="hover:underline py-1 block">
-                 Marketing FB & IG Ads
+                  Marketing FB & IG Ads
                 </Link>
               </li>
               <li>
@@ -109,7 +141,7 @@ export default function Sitemap() {
             >
               <li>
                 <Link to="/" className="hover:underline py-1 block">
-                 E-Book
+                  E-Book
                 </Link>
               </li>
               <li>
@@ -122,7 +154,7 @@ export default function Sitemap() {
               </li>
               <li>
                 <Link to="/" className="hover:underline py-1 block">
-                 Malunra (Ekstrak Ikan Gabus)
+                  Malunra (Ekstrak Ikan Gabus)
                 </Link>
               </li>
             </SitemapLinks>
@@ -130,14 +162,23 @@ export default function Sitemap() {
               <h5 className="text-lg font-semibold mb-2 relative">
                 Special Letter
               </h5>
-              <form action="#">
+              <form action="#" onSubmit={handleOnSubmit}>
                 <label className="relative w-full">
                   <input
-                    type="text"
-                    className="bg-gray-100 rounded-xl py-3 px-5 w-full focus:outline-none"
-                    placeholder="Your email adress"
+                    id="Whatsapp" type="Whatsapp" name="Whatsapp" required
+                    className="bg-gray-100 rounded-xl py-3 px-5 mb-2 w-full focus:outline-none"
+                    placeholder="No Handphone Whatsapp + Nama Anda"
                   />
-                  <button className="bg-pink-400 absolute rounded-xl right-0 p-3">
+                  <input
+                    id="pesan" type="pesan" name="pesan" required
+                    className="bg-gray-100 rounded-xl py-3 px-5 w-full focus:outline-none"
+                    placeholder="Tulis Pesan Anda di sini..."
+                  />
+                  <button
+                    type="submit"
+                    disabled={serverState.submitting}
+                    className="bg-pink-400 absolute rounded-xl right-0 p-3 px-8 mt-10"
+                  >
                     <svg
                       width="24"
                       height="24"
@@ -151,6 +192,11 @@ export default function Sitemap() {
                       />
                     </svg>
                   </button>
+                  {serverState.status && (
+                    <p className={!serverState.status.ok ? "errorMsg" : ""}>
+                      {serverState.status.msg}
+                    </p>
+                  )}
                 </label>
               </form>
             </div>

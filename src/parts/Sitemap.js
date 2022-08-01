@@ -167,7 +167,7 @@ export default function Sitemap() {
                   <input
                     id="Whatsapp" type="Whatsapp" name="Whatsapp" required
                     className="bg-gray-100 rounded-xl py-3 px-5 mb-2 w-full focus:outline-none"
-                    placeholder="No Handphone Whatsapp + Nama Anda"
+                    placeholder="No Whatsapp + Nama Anda"
                   />
                   <input
                     id="pesan" type="pesan" name="pesan" required
@@ -177,7 +177,7 @@ export default function Sitemap() {
                   <button
                     type="submit"
                     disabled={serverState.submitting}
-                    className="bg-pink-400 absolute rounded-xl right-0 p-3 px-8 mt-10"
+                    className="bg-pink-400 absolute rounded-xl right-0 p-3 px-8"
                   >
                     <svg
                       width="24"

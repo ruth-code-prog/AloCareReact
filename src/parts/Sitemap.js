@@ -182,7 +182,7 @@ export default function Sitemap() {
                   <button
                     type="submit"
                     disabled={serverState.submitting}
-                    className="bg-pink-400 absolute rounded-xl right-0 p-3 px-8 mt-12"
+                    className="bg-pink-400 absolute rounded-xl right-0 p-3 px-8 mt-8"
                   >
                     <svg
                       width="24"
